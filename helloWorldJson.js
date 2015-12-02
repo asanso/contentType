@@ -1,5 +1,6 @@
 var express = require("express");
 var app = express();
+var port = (process.env.PORT || 5000);
 
 var resource = {
 	"helloWorld" : ""
@@ -14,7 +15,7 @@ app.get("/", function(req, res){
 
 });
 
-var server = app.listen((process.env.PORT || 5000), 'localhost', function () {
+var server = app.listen(port, 'localhost', function () {
   var host = server.address().address;
-  var port = (process.env.PORT || 5000);
+  var port = port;
 });
