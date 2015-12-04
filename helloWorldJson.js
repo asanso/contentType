@@ -1,4 +1,5 @@
 var express = require("express");
+var nosql = require('nosql').load('database.nosql');
 var app = express();
 app.set('port', (process.env.PORT || 5000));
 
